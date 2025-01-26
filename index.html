@@ -6,7 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
   </head>
-  <body>
+  <body class="bg-complex-gradient mx-auto px-64 min-h-screen">
+    <header class="mt-4">
+      <nav class="fixed backdrop-blur-[8px] z-11 h-fit  ">
+        
+        <ul class="flex gap-4 justify-center">
+          <li><a href="" title="Accueil" class="menu">Accueil</a></li>
+          <li><a href="" title="Compétences" class="menu">Compétences </a>
+          <li><a href="" title="Portfolio" class="menu">Portfolio</a></li>
+          <li><a href="" title="Mon expérience" class="menu">Mon expérience</a></li>
+          <li><a href="" title="Contact">Contact</a></li>
+          <li><a class="flex flex-row" href="./src/assets/pdf/Gaillard cv full stack.pdf" download="cv_vincent_gaillard" title="CV">CV <img class="h-[50px]" src="./src/assets/jpg/Download_icon-icons.com_75235.png"/></a></li>
+        </ul>
+      </nav>
+    </header>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
