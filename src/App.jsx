@@ -1,6 +1,7 @@
 import Autres from './components/autres';
 import Back from './components/back';
 import Card from './components/card';
+import Certifications from './components/certifications';
 import Front from './components/front';
 import Portfolio from './components/portfolio';
 import './styles/gradient.css';
@@ -39,7 +40,7 @@ function App() {
       </div>
       <div className='flex gap-32 flex-col'>
         <h2 className='uppercase m-auto font-poppins font-medium text-[30px]'>mon expérience</h2>
-        
+        <Certifications />
       </div>
       <div className='flex gap-32 flex-col'>
         <h2 className='uppercase m-auto font-poppins font-medium text-[30px]'>contact</h2>
