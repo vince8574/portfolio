@@ -1,31 +1,59 @@
-export function Portfolio() {
-    return (
-       <div className="flex flex-row flex-wrap gap-4 justify-between"> 
-        <div className='flex flex-wrap flex-col gap-4 p-8 rounded-[15px] border-1 border-solid border-white w-[50%] m-auto'>
-          <h3 className='m-auto font-poppins font-bold text-2xl'>olympeetodin.fr</h3>
-          <div className='flex flex-row gap-4 flex-wrap'>
-            <div className='flex flex-col gap-2'>
-            <a href='https://olympeetodin.fr' target='_blank' rel='noreferrer'>
-              <img className="h-[300px]" src='../src/assets/jpg/site_olympe.png' alt='site_olympeetodin'/>
-            </a>
-            <div className="flex flex-row">
-              <p className="font-poppins">Site de e-commerce pour une jeune créatrice de bijoux en micro macramé développer sous Wordpress </p><img src="../src/assets/svg/wordpress-icon.svg" className="h-[18px]"/><p>, maquette sous FIGMA <img src="../src/assets/svg/figma.svg" className="h-[18px]"/></p> 
-            </div>              
-            </div>     
-          </div>
-        </div>
-        <div className='flex flex-wrap flex-col gap-4 p-8 rounded-[15px] border-1 border-solid border-white w-[40%] m-auto'>
-          <h3 className='m-auto font-poppins font-bold text-2xl'>lelaboratoiredelalpe.ch</h3>
-          <div className='flex flex-row gap-4 flex-wrap'>
-            <div className='flex flex-col gap-2 m-auto'>
-            <a href='https://lelaboratoiredelalpe.ch' target='_blank' rel='noreferrer'>
-              <img className="h-[300px]" src='../src/assets/jpg/labo.png' alt='site_laboratoiredelalpe'/>
-            </a>               
-            </div>     
-          </div>
-        </div>
+import siteOlympe from '../assets/jpg/site_olympe.png';
+import siteLabo from '../assets/jpg/labo.png';
+import wordpressIcon from '../assets/svg/wordpress-icon.svg';
+import figmaIcon from '../assets/svg/figma.svg';
+import laravelIcon from '../assets/svg/laravel.svg';
+import tailwindIcon from '../assets/svg/tailwindcss-icon.svg';
 
+const Projects = () => {
+  return (
+    <div className="flex flex-wrap gap-4 justify-between">
+      {/* Projet Olympe et Odin */}
+      <div className="flex flex-col gap-4 p-8 rounded-[15px] border border-solid border-white w-full md:w-1/2 lg:w-2/5">
+        <h3 className="text-center font-poppins font-bold text-2xl">olympeetodin.fr</h3>
+        <div className="flex flex-col gap-4">
+          <a href="https://olympeetodin.fr" target="_blank" rel="noreferrer">
+            <img className="w-full max-w-[400px] h-auto object-contain mx-auto" src={siteOlympe} alt="site_olympeetodin" />
+          </a>
+          <div className="flex items-center gap-2">
+            <p className="font-poppins">
+              Site e-commerce sous{" "}
+              <span className="inline-flex items-center">
+                Wordpress <img src={wordpressIcon} className="h-[18px] ml-1" alt="WordPress" />
+              </span>, wireframe, maquette sous{" "}
+              <span className="inline-flex items-center">
+                Figma <img src={figmaIcon} className="h-[18px] ml-1" alt="Figma" />
+              </span>
+            </p>
+          </div>
+
+        </div>
       </div>
-    )
-}
-export default Portfolio
+
+      {/* Projet Le Laboratoire de l'Alpe */}
+      <div className="flex flex-col gap-4 p-8 rounded-[15px] border border-solid border-white w-full md:w-1/2 lg:w-2/5">
+        <h3 className="text-center font-poppins font-bold text-2xl">lelaboratoiredelalpe.ch</h3>
+        <div className="flex flex-col items-center gap-4">
+          <a href="https://lelaboratoiredelalpe.ch" target="_blank" rel="noreferrer">
+            <img className="h-[300px]" src={siteLabo} alt="site_laboratoiredelalpe" />
+          </a>
+          <div className="flex items-center gap-2">
+            <p className="font-poppins">
+              Site pour une association sous{" "}
+              <span className="inline-flex items-center">
+                Laravel <img src={laravelIcon} className="h-[18px] ml-1" alt="Laravel" />
+              </span> et {""}
+              <span className="inline-flex items-center">
+                Tailwindcss <img src={tailwindIcon} className="h-[18px] ml-1" alt="Tailwindcss" /></span>, wireframe, maquette sous{" "}
+              <span className="inline-flex items-center">
+                Figma <img src={figmaIcon} className="h-[18px] ml-1" alt="Figma" />
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
