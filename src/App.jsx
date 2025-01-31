@@ -8,7 +8,7 @@ import './styles/gradient.css';
 import { motion } from 'framer-motion';
 
 function App() {
-  
+   
 
   return (
     <>
