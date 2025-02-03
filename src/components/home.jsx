@@ -77,7 +77,7 @@ export const Home = () => {
               transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
             ></motion.div>
 
-            <h1 className="font-poppins font-medium text-3xl lg:text-[50px]">
+            <h1 className="font-poppins font-bold text-3xl lg:text-[50px]">
               Développeur Full Stack
             </h1>
             <h2 className="font-poppins font-bold text-2xl lg:text-[38px]">
@@ -101,7 +101,7 @@ export const Home = () => {
         {/* Section Compétences */}
         <section id="competences">
           <div className="flex gap-16 flex-col relative">
-            <h2 className="uppercase m-auto font-poppins font-medium text-2xl lg:text-[30px]">
+            <h2 className="uppercase m-auto font-poppins font-bold text-2xl lg:text-[30px]">
               compétences
             </h2>
             <div className="relative flex flex-col items-center">
@@ -133,14 +133,14 @@ export const Home = () => {
         {/* Section Portfolio et Expérience */}
         <div className="flex gap-16 flex-col m-auto mt-32">
           <section id="portfolio" className="flex gap-16 flex-col">
-            <h2 className="uppercase m-auto font-poppins font-medium text-2xl lg:text-[30px]">
+            <h2 className="uppercase m-auto font-poppins font-bold text-2xl lg:text-[30px]">
               portfolio
             </h2>
             <Portfolio />
           </section>
           <section id="experience">
             <div className="flex gap-32 flex-col">
-              <h2 className="uppercase m-auto font-poppins font-medium text-2xl lg:text-[30px]">
+              <h2 className="uppercase m-auto font-poppins font-bold text-2xl lg:text-[30px]">
                 mon expérience
               </h2>
               <Certifications />

@@ -5,14 +5,14 @@ export function Certifications() {
     <div className="flex flex-col gap-8 p-4 lg:p-8 overflow-hidden">
       {/* Première certification */}
       <motion.div
-        className="flex flex-col gap-4 p-4 lg:p-8 rounded-[15px] border border-solid border-white w-full lg:w-[75%] mx-auto"
-        initial={{ opacity: 0, x: -500 }} // Commence caché, décalé vers la gauche
-        whileInView={{ opacity: 1, x: 0 }} // Devient visible en se déplaçant vers la droite
-        transition={{ duration: 0.8, ease: "easeOut" }} // Animation fluide
-        viewport={{ once: true, amount: 0.2 }} // Déclenchement à 20% de la div visible
+        className="flex flex-col gap-4 p-4 lg:p-8 rounded-[15px] border border-solid border-white w-full lg:w-[75%] mx-auto lg:ml-0"
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <h3 className="m-auto font-poppins font-bold text-2xl text-center lg:text-left">
-          Certification Full-Stack Developper
+          Certification Full-Stack Developer
         </h3>
         <div className="flex flex-col gap-4">
           <h4 className="font-poppins font-semibold text-xl">Développement Web Front-End</h4>
@@ -33,24 +33,16 @@ export function Certifications() {
             La formation de Full-Stack Developer se déroule sur une durée d’un
             semestre.
           </p>
-          <p className="font-poppins text-base">
-            Elle est basée sur la conception et le développement de travaux de
-            projets personnels lors de chaque module.
-          </p>
-          <p className="font-poppins text-base">
-            Le Diplôme de Full-Stack Developer représente 800 heures de travail
-            correspondant à 32 ECTS (European Credits Transfert System).
-          </p>
         </div>
       </motion.div>
 
       {/* Deuxième certification */}
       <motion.div
-        className="flex flex-col gap-4 p-4 lg:p-8 rounded-[15px] border border-solid border-white w-full lg:w-[75%] ml-auto"
-        initial={{ opacity: 0, x: 500 }} // Commence caché, décalé vers la droite
-        whileInView={{ opacity: 1, x: 0 }} // Devient visible en se déplaçant vers la gauche
-        transition={{ duration: 0.8, ease: "easeOut" }} // Animation fluide
-        viewport={{ once: true, amount: 0.2 }} // Déclenchement à 20% de la div visible
+        className="flex flex-col gap-4 p-4 lg:p-8 rounded-[15px] border border-solid border-white w-full lg:w-[75%] mx-auto lg:mr-0"
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <h3 className="m-auto font-poppins font-bold text-2xl text-center lg:text-left">
           Certification Python Software Engineer
@@ -61,20 +53,16 @@ export function Certifications() {
             application back-end réalisée avec le langage de programmation
             Python.
           </p>
-          <p className="font-poppins text-base">
-            La durée totale de la formation est de huit semaines, dont deux
-            semaines dédiées au travail de projet personnel.
-          </p>
         </div>
       </motion.div>
 
       {/* Troisième certification */}
       <motion.div
-        className="flex flex-col gap-4 p-4 lg:p-8 rounded-[15px] border border-solid border-white w-full lg:w-[75%] mx-auto"
-        initial={{ opacity: 0, x: -500 }} // Commence caché, décalé vers la gauche
-        whileInView={{ opacity: 1, x: 0 }} // Devient visible en se déplaçant vers la droite
-        transition={{ duration: 0.8, ease: "easeOut" }} // Animation fluide
-        viewport={{ once: true, amount: 0.2 }} // Déclenchement à 20% de la div visible
+        className="flex flex-col gap-4 p-4 lg:p-8 rounded-[15px] border border-solid border-white w-full lg:w-[75%] mx-auto lg:ml-0"
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <h3 className="m-auto font-poppins font-bold text-2xl text-center lg:text-left">
           Certification WebProgrammer
@@ -85,23 +73,16 @@ export function Certifications() {
             application web réalisée avec JavaScript ES6, le qualifiant pour le
             métier de WebProgrammer.
           </p>
-          <p className="font-poppins text-base">
-            Ce projet comporte un travail de conception, incluant l’analyse des
-            besoins du client, l’architecture de l’information, la conception
-            visuelle et le design de l’interface. La durée totale de la formation
-            est de huit semaines, dont deux semaines dédiées au travail de projet
-            personnel.
-          </p>
         </div>
       </motion.div>
 
       {/* Quatrième certification */}
       <motion.div
-        className="flex flex-col gap-4 p-4 lg:p-8 rounded-[15px] border border-solid border-white w-full lg:w-[75%] ml-auto"
-        initial={{ opacity: 0, x: 500 }} // Commence caché, décalé vers la droite
-        whileInView={{ opacity: 1, x: 0 }} // Devient visible en se déplaçant vers la gauche
-        transition={{ duration: 0.8, ease: "easeOut" }} // Animation fluide
-        viewport={{ once: true, amount: 0.2 }} // Déclenchement à 20% de la div visible
+        className="flex flex-col gap-4 p-4 lg:p-8 rounded-[15px] border border-solid border-white w-full lg:w-[75%] mx-auto lg:mr-0"
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <h3 className="m-auto font-poppins font-bold text-2xl text-center lg:text-left">
           Certification WebDesigner
@@ -112,17 +93,6 @@ export function Certifications() {
             incluant l’analyse du besoin du client, la gestion des contenus,
             l’architecture de l’information, la conception visuelle et le
             développement du site web.
-          </p>
-          <p className="font-poppins text-base">
-            Ce projet comporte un travail de conception, incluant l’analyse des
-            besoins du client, l’architecture de l’information, la conception
-            visuelle et le design de l’interface. La durée totale de la formation
-            est de huit semaines, dont deux semaines dédiées au travail de projet
-            personnel.
-          </p>
-          <p className="font-poppins text-base">
-            La durée totale de la formation est de sept semaines, dont deux
-            semaines dédiées au travail de projet personnel.
           </p>
         </div>
       </motion.div>
