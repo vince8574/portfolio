@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vincent Gaillard Développeur full stack</title>
+    <script type="module" crossorigin src="/assets/index-DZ3fmjZ1.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-ClsjPzWL.css">
+  </head>
+  <body class="bg-complex-gradient mx-auto min-h-screen flex flex-col overflow-x-hidden">
+    
+    <header id="mainHeader" class="flex flex-wrap py-4 bg-[#1C2321] text-[#F9F9F9] fixed z-11 w-full transition-all duration-300">
+      <nav class="h-fit justify-between w-full">
+        <!-- Bouton Burger Menu (visible sur les petits écrans) -->
+        <div class="flex justify-between items-center px-4 lg:hidden">
+          <a href="/" title="Accueil" class="font-poppins font-bold text-lg">
+            Vincent Gaillard
+          </a>
+          <button
+            id="burgerMenuButton"
+            class="p-2 focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            <svg
+              id="burgerMenuIcon"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+        <!-- Menu principal (visible sur les grands écrans) -->
+        <ul
+          id="mainMenu"
+          class="hidden lg:flex lg:gap-4 lg:justify-center lg:items-center"
+        >
+          <li>
+            <a
+              href="/"
+              title="Accueil"
+              class="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]"
+            >
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a
+              href="/#competences"
+              title="Compétences"
+              class="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]"
+            >
+              Compétences
+            </a>
+          </li>
+          <li>
+            <a
+              href="/#portfolio"
+              title="Portfolio"
+              class="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]"
+            >
+              Portfolio
+            </a>
+          </li>
+          <li>
+            <a
+              href="/#experience"
+              title="Mon expérience"
+              class="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]"
+            >
+              Mon expérience
+            </a>
+          </li>
+          <li>
+            <a
+              href="/contact"
+              title="Contact"
+              class="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]"
+            >
+              Contact
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex flex-row font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432] items-center"
+              href="./src/assets/pdf/Gaillard cv full stack.pdf"
+              download="cv_vincent_gaillard"
+              title="CV"
+            >
+              CV <img class="w-6 h-6 ml-2" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24px'%20viewBox='0%20-960%20960%20960'%20width='24px'%20fill='%23F9F9F9'%3e%3cpath%20d='M480-320%20280-520l56-58%20104%20104v-326h80v326l104-104%2056%2058-200%20200ZM240-160q-33%200-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0%2033-23.5%2056.5T720-160H240Z'/%3e%3c/svg%3e" alt="Télécharger le CV" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="px-4 md:px-16 lg:px-32 xl:px-64 flex-grow mb-16" id="root"></div>
+    
+    <footer class="flex justify-center items-center bg-[#1C2321] text-[#F9F9F9] font-poppins border-t border-white border-solid w-full mt-auto">
+      <p class="text-sm md:text-base lg:text-lg">Site réalisé par Vincent Gaillard en React.JS et Tailwindcss version 4</p>
+    </footer>
+  
+    <script>
+      // Gestion du burger menu
+      const burgerMenuButton = document.getElementById("burgerMenuButton");
+      const mainMenu = document.getElementById("mainMenu");
+      const burgerMenuIcon = document.getElementById("burgerMenuIcon");
+
+      burgerMenuButton.addEventListener("click", () => {
+        const isMenuOpen = mainMenu.classList.toggle("hidden");
+        // Change l'icône du burger menu
+        if (isMenuOpen) {
+          burgerMenuIcon.innerHTML = `
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          `;
+        } else {
+          burgerMenuIcon.innerHTML = `
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          `;
+        }
+      });
+
+      // Fermer le menu lorsqu'un lien est cliqué
+      const menuLinks = document.querySelectorAll("#mainMenu a");
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mainMenu.classList.add("hidden");
+          burgerMenuIcon.innerHTML = `
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          `;
+        });
+      });
+
+      // Gestion du scroll pour réduire le padding du header
+      const header = document.getElementById("mainHeader");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          header.classList.add("py-2"); // Padding réduit
+          header.classList.remove("py-4"); // Padding initial
+        } else {
+          header.classList.remove("py-2"); // Padding réduit
+          header.classList.add("py-4"); // Padding initial
+        }
+      });
+    </script>
+    <script>
+      function scrollToTop(event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    
+      function scrollToSection(event, id) {
+        event.preventDefault();
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
+    <button
+      id="backToTopBtn"
+      title="Retour en haut"
+      class="fixed bottom-8 right-8 p-4 bg-[#f911be] text-white rounded-full shadow-lg hover:bg-blue-600 transition duration-300 opacity-0 invisible"
+    >
+      <object
+        type="image/svg+xml"
+        data="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20height='24px'%20viewBox='0%20-960%20960%20960'%20width='24px'%20fill='%23000'%3e%3cpath%20d='M440-160v-487L216-423l-56-57%20320-320%20320%20320-56%2057-224-224v487h-80Z'/%3e%3c/svg%3e"
+        class="w-6 h-6 pointer-events-none"
+      ></object>
+    </button>
+    <script>
+      // Sélectionnez le bouton
+      const backToTopBtn = document.getElementById('backToTopBtn');
+    
+      // Fonction pour afficher ou masquer le bouton en fonction de la position de défilement
+      function toggleBackToTopButton() {
+        if (window.scrollY > window.innerHeight) {
+          backToTopBtn.classList.remove('opacity-0', 'invisible');
+          backToTopBtn.classList.add('opacity-100', 'visible');
+        } else {
+          backToTopBtn.classList.remove('opacity-100', 'visible');
+          backToTopBtn.classList.add('opacity-0', 'invisible');
+        }
+      }
+    
+      // Ajoutez un écouteur d'événement pour le défilement
+      window.addEventListener('scroll', toggleBackToTopButton);
+    
+      // Ajoutez un écouteur d'événement pour le clic sur le bouton
+      backToTopBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>
