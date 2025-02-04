@@ -21,7 +21,7 @@ function Header() {
     const handleClickOutside = (event) => {
       // Fermer le menu si le clic est en dehors du menu
       if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsMenuOpen(false);
+        closeMenu();
       }
     };
 
