@@ -79,9 +79,9 @@ export function Contact() {
                     ></motion.div>
                 </motion.div>
 
-                {/* Carte à droite */}
+                
                 <motion.div
-                    className="w-full lg:w-1/2"
+                    className="flex justify-center w-full lg:w-1/2"
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 1 }}
