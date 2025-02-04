@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import photo from "../assets/jpg/photo.jpg";
 
 export function Card() {
   const cardRef = useRef(null); // Référence pour accéder à l'élément de la card
@@ -52,7 +53,7 @@ export function Card() {
       >
         <img
           className="rounded-[15px] max-w-[350px]"
-          src="../src/assets/jpg/photo.jpg"
+          src={photo}
           alt="Card Image"
         />
       </div>
