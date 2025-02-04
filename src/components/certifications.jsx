@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
-import download from "../assets/svg/download.svg";
-import fullstack from "../assets/pdf/fullstack.pdf";
-import python from "../assets/pdf/python.pdf";
-import webprogrammer from "../assets/pdf/webprogrammer.pdf";
-import webdesigner from "../assets/pdf/webdesigner.pdf";
+
 
 export function Certifications() {
   return (
