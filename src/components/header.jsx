@@ -64,7 +64,14 @@ function Header() {
             Vincent Gaillard
           </Link>
           <button
-            onClick={toggleMenu}
+            onClick={(e) => {
+              e.stopPropagation(); // Empêcher la propagation de l'événement
+              if (isMenuOpen) {
+                closeMenu(); // Fermer le menu si ouvert
+              } else {
+                toggleMenu(); // Ouvrir le menu si fermé
+              }
+            }}
             className="p-2 focus:outline-none"
             aria-label="Toggle Menu"
           >
