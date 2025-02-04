@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import download from "../assets/svg/download.svg";
 import cv from "../assets/pdf/cv.pdf";
 
+
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +34,8 @@ function Header() {
       <nav className="h-fit justify-between w-full">
         {/* Bouton Burger Menu (Mobile) */}
         <div className="flex justify-between items-center px-4 lg:hidden">
-          <Link to="" title="Accueil" className="font-poppins font-bold text-lg">
+          <Link to="" title="Accueil" className="font-poppins font-bold text-lg"  onClick={() => {
+      window.scrollTo({top: 0, behavior: 'smooth'});}}>
             Vincent Gaillard
           </Link>
           <button
@@ -59,7 +61,18 @@ function Header() {
             isMenuOpen ? "block" : "hidden"
           } lg:block absolute top-full left-0 w-full lg:static bg-[#1C2321] lg:bg-transparent`}
         >
-          <li><Link to="" className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]" onClick={closeMenu}>Accueil</Link></li>
+          <li>
+            <Link 
+              to="" 
+              className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]" 
+              onClick={() => { 
+                closeMenu(); 
+                window.scrollTo({top: 0, behavior: "smooth"});
+              }}
+            >
+              Accueil
+            </Link>
+          </li>
           <li><Link to="/#competences" className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]" onClick={closeMenu}>Compétences</Link></li>
           <li><Link to="/#portfolio" className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]" onClick={closeMenu}>Portfolio</Link></li>
           <li><Link to="/#experience" className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]" onClick={closeMenu}>Mon expérience</Link></li>
