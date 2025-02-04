@@ -28,7 +28,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center gap-0">
+      <div className="flex flex-col items-center gap-16">
         {/* Section Photo, Ligne et Texte */}
         <div className="my-8 flex flex-col lg:flex-row items-center mt-32">
           {/* Photo */}
@@ -131,7 +131,7 @@ export const Home = () => {
         </section>
 
         {/* Section Portfolio et Expérience */}
-        <div className="flex gap-16 flex-col m-auto mt-32">
+        <div className="flex gap-16 flex-col m-auto">
           <section id="portfolio" className="flex gap-16 flex-col">
             <h2 className="uppercase m-auto font-poppins font-bold text-2xl lg:text-[30px]">
               portfolio
@@ -139,7 +139,7 @@ export const Home = () => {
             <Portfolio />
           </section>
           <section id="experience">
-            <div className="flex gap-32 flex-col">
+            <div className="flex  flex-col">
               <h2 className="uppercase m-auto font-poppins font-bold text-2xl lg:text-[30px]">
                 mon expérience
               </h2>

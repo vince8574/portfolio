@@ -7,7 +7,7 @@ import tailwindIcon from '../assets/svg/tailwindcss-icon.svg';
 
 const Projects = () => {
   return (
-    <div className="flex flex-wrap gap-4 justify-center">
+    <div className="flex flex-wrap gap-4 justify-between">
       {/* Projet Olympe et Odin */}
       <div className="flex flex-col gap-4 p-4 md:p-8 rounded-[15px] border border-solid border-white w-full md:w-[45%] lg:w-[40%]">
         <h3 className="text-center font-poppins font-bold text-xl md:text-2xl">olympeetodin.fr</h3>
