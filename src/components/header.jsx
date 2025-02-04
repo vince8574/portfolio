@@ -76,6 +76,7 @@ function Header() {
           <li><Link to="/#competences" className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]" onClick={closeMenu}>Compétences</Link></li>
           <li><Link to="/#portfolio" className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]" onClick={closeMenu}>Portfolio</Link></li>
           <li><Link to="/#experience" className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]" onClick={closeMenu}>Mon expérience</Link></li>
+          <li><Link to="/#merci" className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]" onClick={closeMenu}>Merci</Link></li>
           <li><Link to="/contact" className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]" onClick={closeMenu}>Contact</Link></li>
           <li>
             <a

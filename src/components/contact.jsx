@@ -36,7 +36,7 @@ export function Contact() {
                         </h2>
                         <div className="flex items-center gap-2">
                             <img src={phone} alt="Phone" className="w-6 h-6" />
-                            <span className="font-poppins text-xl lg:text-[28px]">+33681931168</span>
+                            <span className="font-poppins text-xl lg:text-[28px]">+33647947837</span>
                         </div>
                         <a href="mailto:vgaillard85@gmail.com" className="flex items-center gap-2">
                             <img src={mail} alt="Mail" className="w-6 h-6" />

@@ -4,6 +4,7 @@ import Card from './card';
 import Certifications from './certifications';
 import Front from './front';
 import Portfolio from './portfolio';
+import Remerciements from './remerciement';
 import '../styles/gradient.css';
 import { motion } from 'framer-motion';
 import { useEffect } from "react";
@@ -144,6 +145,14 @@ export const Home = () => {
                 mon expérience
               </h2>
               <Certifications />
+            </div>
+          </section>
+          <section id="merci">
+            <div className="flex  flex-col">
+              <h2 className="uppercase m-auto font-poppins font-bold text-2xl lg:text-[30px]">
+              ils m'ont fait grandir et m'ont fait confiance
+              </h2>
+              <Remerciements />
             </div>
           </section>
         </div>
