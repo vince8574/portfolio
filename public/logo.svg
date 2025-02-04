@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(117, 117, 117, 0.03);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(8, 8, 8, 0.03);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(107, 107, 107, 0.07);stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="59deg" y1="0%" x2="59deg" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(245, 245, 245, 0.05);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(68, 68, 68, 0.05);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(7, 7, 7, 0.07);stop-opacity:1" />
+    </linearGradient>
+    <!-- Dégradés supplémentaires peuvent être ajoutés ici -->
+  </defs>
+  
+  <!-- Cercle de fond avec gradient -->
+  <circle cx="50" cy="50" r="45" fill="url(#gradient1)" />
+
+  <!-- Initiales "VG" -->
+  <text x="50%" y="50%" font-family="Poppins" font-size="20" fill="white" text-anchor="middle" dy=".3em">VG</text>
+</svg>
