@@ -7,6 +7,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef(null); // Référence pour le menu
+  const closeButtonRef = useRef(null); // Référence pour le bouton de fermeture (croix)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,8 +20,13 @@ function Header() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // Fermer le menu si le clic est en dehors du menu
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+      // Fermer le menu si le clic est en dehors du menu ET en dehors du bouton de fermeture
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        closeButtonRef.current &&
+        !closeButtonRef.current.contains(event.target)
+      ) {
         closeMenu();
       }
     };
@@ -64,6 +70,7 @@ function Header() {
             Vincent Gaillard
           </Link>
           <button
+            ref={closeButtonRef} // Référence pour le bouton de fermeture
             onClick={(e) => {
               e.stopPropagation(); // Empêcher la propagation de l'événement
               if (isMenuOpen) {
@@ -109,7 +116,7 @@ function Header() {
 
         {/* Menu principal */}
         <ul
-          ref={menuRef} // Ajouter une référence au menu
+          ref={menuRef} // Référence pour le menu
           className={`lg:flex lg:gap-4 lg:justify-center lg:items-center ${
             isMenuOpen ? "block" : "hidden"
           } lg:block absolute top-full left-0 w-full lg:static bg-[#1C2321] lg:bg-transparent`}
