@@ -27,7 +27,7 @@ function Header() {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "py-2" : "py-4"
+        isScrolled ? "py-0" : "py-4"
       } bg-[#1C2321] text-[#F9F9F9]`}
     >
       <nav className="h-fit justify-between w-full">
