@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import download from "../assets/svg/download.svg";
+import cv from "../assets/pdf/cv.pdf";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,12 +67,12 @@ function Header() {
           <li>
             <a
               className="flex flex-row font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432] items-center"
-              href="./src/assets/pdf/Gaillard cv full stack.pdf"
+              href={cv}
               download="cv_vincent_gaillard"
               title="CV"
               onClick={closeMenu}
             >
-              CV <img className="w-6 h-6 ml-2" src="./src/assets/svg/download.svg" alt="Télécharger le CV" />
+              CV <img className="w-6 h-6 ml-2" src={download} alt="Télécharger le CV" />
             </a>
           </li>
         </ul>
