@@ -31,14 +31,14 @@ export function Back() {
         {techs.map((tech, index) => (
           <motion.div
             key={tech.name}
-            className="flex flex-col gap-2"
+            className="flex flex-col gap-2 items-center justify-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }} // Apparition progressive
             viewport={{ once: true, amount: 0.2 }}
           >
             <img className="h-[100px]" src={tech.src} alt={tech.alt} />
-            <span className="m-auto uppercase font-poppins">{tech.name}</span>
+            <span className="m-auto uppercase font-poppins text-center">{tech.name}</span>
           </motion.div>
         ))}
       </div>
