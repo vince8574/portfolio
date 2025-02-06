@@ -21,10 +21,10 @@ export function Back() {
         
       <motion.div
       className="flex flex-wrap flex-col gap-4 p-8 rounded-[15px] border border-solid border-white w-fit m-auto"
-      initial={{ opacity: 0, scale: 0 }} // Commence caché et réduit
-      whileInView={{ opacity: 1, scale: 1 }} // Devient visible et grandit
-      transition={{ duration: 0.8, ease: "easeOut" }} // Animation fluide
-      viewport={{ once: true, amount: 0.2 }} // Déclenchement au scroll
+      initial={{ opacity: 0, scale: 0 }} // Start hidden and reduced
+      whileInView={{ opacity: 1, scale: 1 }} // Becomes visible and grows
+      transition={{ duration: 0.8, ease: "easeOut" }} // Smooth animation
+      viewport={{ once: true, amount: 0.2 }} // Scroll Trigger
     >
       <h3 className="m-auto font-poppins font-bold text-2xl">back end</h3>
       <div className="flex flex-row gap-4 flex-wrap">
@@ -34,7 +34,7 @@ export function Back() {
             className="flex flex-col gap-2 items-center justify-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }} // Apparition progressive
+            transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }} // Gradual appearance
             viewport={{ once: true, amount: 0.2 }}
           >
             <img className="h-[100px]" src={tech.src} alt={tech.alt} />

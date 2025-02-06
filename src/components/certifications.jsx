@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export function Certifications() {
   return (
     <div className="flex flex-col gap-8 p-4 lg:p-8 overflow-hidden">
-      {/* Première certification */}
+      {/* First certification */}
       <motion.div
         className="flex flex-col gap-4 p-4 lg:p-8 rounded-[15px] border border-solid border-white w-full lg:w-[75%] mx-auto lg:ml-0"
         initial={{ opacity: 0, scale: 0 }}
@@ -38,7 +38,7 @@ export function Certifications() {
         </div>
       </motion.div>
 
-      {/* Deuxième certification */}
+      {/* Second certification */}
       <motion.div
         className="flex flex-col gap-4 p-4 lg:p-8 rounded-[15px] border border-solid border-white w-full lg:w-[75%] mx-auto lg:mr-0"
         initial={{ opacity: 0, scale: 0 }}
@@ -58,7 +58,7 @@ export function Certifications() {
         </div>
       </motion.div>
 
-      {/* Troisième certification */}
+      {/* Third certification */}
       <motion.div
         className="flex flex-col gap-4 p-4 lg:p-8 rounded-[15px] border border-solid border-white w-full lg:w-[75%] mx-auto lg:ml-0"
         initial={{ opacity: 0, scale: 0 }}
@@ -78,7 +78,7 @@ export function Certifications() {
         </div>
       </motion.div>
 
-      {/* Quatrième certification */}
+      {/* Fourth certification */}
       <motion.div
         className="flex flex-col gap-4 p-4 lg:p-8 rounded-[15px] border border-solid border-white w-full lg:w-[75%] mx-auto lg:mr-0"
         initial={{ opacity: 0, scale: 0 }}

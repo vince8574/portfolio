@@ -2,7 +2,7 @@ import { useRef } from "react";
 import photo from "../assets/jpg/photo.jpg";
 
 export function Card() {
-  const cardRef = useRef(null); // Référence pour accéder à l'élément de la card
+  const cardRef = useRef(null); // Reference to access the card element
 
   const handleMouseMove = (e) => {
     const el = cardRef.current;
@@ -19,7 +19,7 @@ export function Card() {
     const glowX = (x / elRect.width) * 100;
     const glowY = (y / elRect.height) * 100;
 
-    // Ajoute les transformations à l'élément et au "glow"
+    // Adds transformations to the element and the "glow"
     el.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.1)`;
     el.querySelector("#glow").style.background = `radial-gradient(circle at ${glowX}% ${glowY}%, rgb(184,196,211), transparent)`;
   };
@@ -27,7 +27,7 @@ export function Card() {
   const handleMouseLeave = () => {
     const el = cardRef.current;
 
-    // Réinitialise les transformations
+    // Resets transformations
     el.style.transform = `rotateX(0) rotateY(0)`;
     el.querySelector("#glow").style.background = `radial-gradient(circle at 50% 0%, rgb(184, 196, 211), transparent)`;
   };
@@ -35,7 +35,7 @@ export function Card() {
   return (
     <div
       id="container"
-      ref={cardRef} // Attache la référence à la card
+      ref={cardRef} // Attach the reference to the card
       className="rounded-[15px] w-[350px] perspective-[1000px] hover:z-10"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}

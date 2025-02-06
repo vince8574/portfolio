@@ -7,17 +7,17 @@ import { motion } from 'framer-motion';
 
 export function Contact() {
     return (
-        <div className="flex flex-col items-center gap-0">
-            {/* Section Contact */}
+        <div className="flex flex-col items-center gap-0 mx-4">
+            {/* Contact Section */}
             <h2 className="uppercase m-auto font-poppins font-bold text-2xl lg:text-[30px] mt-32">Contact</h2>
             <div className="my-8 flex flex-col lg:flex-row items-center mt-32">
-                {/* Contenu de contact à gauche */}
+                {/* Contact content on the left */}
                 <motion.div
-                    className="relative flex flex-col rounded-[15px] p-8 gap-4 w-full lg:max-w-[50%] h-auto"
+                    className="relative flex flex-col rounded-[15px] p-8 gap-4 w-full lg:max-w-[50%] h-auto px-4"
                     style={{ border: "1px solid transparent" }}
-                    
                 >
-                    {/* Animation de la bordure */}
+
+                    {/* Border animation */}
                     <motion.div
                         className="absolute inset-0 rounded-[15px] border border-white"
                         initial={{
@@ -53,14 +53,14 @@ export function Contact() {
                     </div>
                 </motion.div>
 
-                {/* Ligne animée */}
+                {/* Animated line */}
                 <motion.div
                     className="flex justify-center items-center"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 2 }}
                 >
-                    {/* Ligne horizontale (grands écrans) */}
+                    {/* Horizontal line (large screens) */}
                     <motion.div
                         className="hidden lg:block bg-white border-t border-white"
                         style={{ height: "1px", width: "420px" }}
@@ -69,7 +69,7 @@ export function Contact() {
                         transition={{ duration: 1, ease: "easeOut", delay: 2 }}
                     ></motion.div>
 
-                    {/* Ligne verticale (petits écrans) */}
+                    {/* Vertical line (small screens) */}
                     <motion.div
                         className="block lg:hidden bg-white border-l border-white"
                         style={{ width: "1px", height: "64px" }}

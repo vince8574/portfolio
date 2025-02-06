@@ -17,15 +17,15 @@
 
 @keyframes line-grow {
     0% {
-      transform: scaleX(0); /* La ligne commence invisible */
+      transform: scaleX(0); 
     }
     100% {
-      transform: scaleX(1); /* La ligne se développe complètement */
+      transform: scaleX(1); 
     }
   }
   
   .animate-line-grow {
-    animation: line-grow 1s ease-out forwards; /* L'animation dure 1 seconde */
+    animation: line-grow 1s ease-out forwards; 
   }
   
   

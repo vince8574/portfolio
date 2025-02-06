@@ -19,7 +19,7 @@ export const Home = () => {
       const section = document.getElementById(sectionId);
       if (section) {
         setTimeout(() => {
-          const yOffset = -80; // Décalage pour compenser la hauteur du header
+          const yOffset = -80; // Offset to compensate for header height
           const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
           window.scrollTo({ top: y, behavior: "smooth" });
         }, 100);
@@ -30,19 +30,18 @@ export const Home = () => {
   return (
     <>
       <div className="flex flex-col items-center gap-16">
-        {/* Section Photo, Ligne et Texte */}
+        {/* Photo, Line and Text Section */}
         <div className="my-8 flex flex-col lg:flex-row items-center mt-32">
-          {/* Photo */}
           <Card />
 
-          {/* Ligne (horizontale sur les grands écrans, verticale sur les petits écrans) */}
+          {/* Line (horizontal on large screens, vertical on small screens) */}
           <motion.div
             className="flex justify-center items-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2 }}
           >
-            {/* Ligne horizontale (grands écrans) */}
+            {/* Horizontal line (large screens) */}
             <motion.div
               className="hidden lg:block bg-white border-t border-white"
               style={{ height: "1px", width: "420px" }}
@@ -51,7 +50,7 @@ export const Home = () => {
               transition={{ duration: 1, ease: "easeOut", delay: 2 }}
             ></motion.div>
 
-            {/* Ligne verticale (petits écrans) */}
+            {/* Vertical line (small screens) */}
             <motion.div
               className="block lg:hidden bg-white border-l border-white"
               style={{ width: "1px", height: "64px" }}
@@ -61,12 +60,12 @@ export const Home = () => {
             ></motion.div>
           </motion.div>
 
-          {/* Texte "Développeur Full Stack" */}
+          {/* Text "Full Stack Developer" */}
           <motion.div
             className="relative flex flex-col rounded-[15px] p-8 gap-4 w-full lg:max-w-[50%] h-auto"
             style={{ border: "1px solid transparent" }}
           >
-            {/* Animation de la bordure */}
+            {/* Border animation */}
             <motion.div
               className="absolute inset-0 rounded-[15px] border border-white"
               initial={{
@@ -99,7 +98,7 @@ export const Home = () => {
           </motion.div>
         </div>
 
-        {/* Section Compétences */}
+        {/* Skills Section */}
         <section id="competences">
           <div className="flex gap-16 flex-col relative">
             <h2 className="uppercase m-auto font-poppins font-bold text-2xl lg:text-[30px]">
@@ -108,7 +107,7 @@ export const Home = () => {
             <div className="relative flex flex-col items-center">
               <Front />
 
-              {/* Ligne entre Front et Back */}
+              {/* Line between Front and Back */}
               <motion.div
                 initial={{ opacity: 0, scaleY: 0 }}
                 whileInView={{ opacity: 1, scaleY: 1 }}
@@ -118,7 +117,7 @@ export const Home = () => {
 
               <Back />
 
-              {/* Ligne entre Back et Autres */}
+              {/* Line between Back and Others */}
               <motion.div
                 initial={{ opacity: 0, scaleY: 0 }}
                 whileInView={{ opacity: 1, scaleY: 1 }}
@@ -131,7 +130,7 @@ export const Home = () => {
           </div>
         </section>
 
-        {/* Section Portfolio et Expérience */}
+        {/* Portfolio and Experience Section */}
         <div className="flex gap-16 flex-col m-auto">
           <section id="portfolio" className="flex gap-16 flex-col">
             <h2 className="uppercase m-auto font-poppins font-bold text-2xl lg:text-[30px]">
@@ -150,7 +149,7 @@ export const Home = () => {
           <section id="merci">
             <div className="flex  flex-col">
               <h2 className="uppercase m-auto font-poppins font-bold text-2xl lg:text-[30px]">
-              ils m'ont fait grandir et m'ont fait confiance
+              ils m&apos;ont fait grandir et m&apos;ont fait confiance
               </h2>
               <Remerciements />
             </div>
