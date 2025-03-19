@@ -71,10 +71,10 @@ const Projects = () => {
                 React.JS <img src={reactJS} className="h-[16px] md:h-[18px] ml-1" alt="React.JS" />
               </span> et{""}
               <span className="inline-flex items-center">
-                Tailwindcss <img src={tailwindIcon} className="h-[16px] md:h-[18px] ml-1" alt="Tailwindcss" /></span>, back-end architecture MVC, developpé en{""}
+                Tailwindcss <img src={tailwindIcon} className="h-[16px] md:h-[18px] ml-1" alt="Tailwindcss" /></span>, back-end architecture MVC, developpé en {""}
               <span className="inline-flex items-center">
-                Python <img src={python} className="h-[16px] md:h-[18px] ml-1" alt="Python" /></span> et{""}
-              <span className="inline-flex items-center">Flask <img src={flask} className="h-[16px] md:h-[18px] ml-1" alt="Flask" /></span> base de données NoSQL sous{""}
+                Python <img src={python} className="h-[16px] md:h-[18px] ml-1" alt="Python" /></span> et {""}
+              <span className="inline-flex items-center">Flask <img src={flask} className="h-[16px] md:h-[18px] ml-1" alt="Flask" /></span> base de données NoSQL sous {""}
               <span className="inline-flex items-center">Firebase <img src={firebase} className="h-[16px] md:h-[18px] ml-1" alt="Firebase" /></span> wireframe, maquette sous{" "}
               <span className="inline-flex items-center">
                 Figma <img src={figmaIcon} className="h-[16px] md:h-[18px] ml-1" alt="Figma" />

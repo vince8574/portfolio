@@ -27,7 +27,7 @@ export function Back() {
       viewport={{ once: true, amount: 0.2 }} // Scroll Trigger
     >
       <h3 className="m-auto font-poppins font-bold text-2xl">back end</h3>
-      <div className="flex flex-row gap-4 flex-wrap">
+      <div className="flex flex-row gap-4 flex-wrap items-center justify-center">
         {techs.map((tech, index) => (
           <motion.div
             key={tech.name}
