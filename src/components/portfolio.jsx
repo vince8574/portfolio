@@ -15,73 +15,73 @@ const Projects = () => {
     <div className="flex flex-wrap gap-4 justify-between">
       {/* OlympeetOdin Project*/}
       <div className="flex flex-col gap-4 p-4 md:p-8 rounded-[15px] border border-solid border-white w-full md:w-[45%] lg:w-[40%]">
-        <h3 className="text-center font-poppins font-bold text-xl md:text-2xl">olympeetodin.fr</h3>
-        <div className="flex flex-col gap-4">
-          <a href="https://olympeetodin.fr" target="_blank" rel="noreferrer">
-            <img className="w-full h-auto object-contain mx-auto" src={siteOlympe} alt="site_olympeetodin" />
-          </a>
-          <div className="flex items-center gap-2">
-            <p className="font-poppins text-sm md:text-base">
-              Site e-commerce sous{" "}
-              <span className="inline-flex items-center">
-                Wordpress <img src={wordpressIcon} className="h-[16px] md:h-[18px] ml-1" alt="WordPress" />
-              </span>, wireframe, maquette sous{" "}
-              <span className="inline-flex items-center">
-                Figma <img src={figmaIcon} className="h-[16px] md:h-[18px] ml-1" alt="Figma" />
-              </span>
-            </p>
+        <a href="https://olympeetodin.fr" target="_blank" rel="noreferrer">
+          <h3 className="text-center font-poppins font-bold text-xl md:text-2xl">olympeetodin.fr</h3>
+          <div className="flex flex-col gap-4">
+              <img className="w-full h-auto object-contain mx-auto" src={siteOlympe} alt="site_olympeetodin" />
+            <div className="flex items-center gap-2">
+              <p className="font-poppins text-sm md:text-base">
+                Site e-commerce sous{" "}
+                <span className="inline-flex items-center">
+                  Wordpress <img src={wordpressIcon} className="h-[16px] md:h-[18px] ml-1" alt="WordPress" />
+                </span>, wireframe, maquette sous{" "}
+                <span className="inline-flex items-center">
+                  Figma <img src={figmaIcon} className="h-[16px] md:h-[18px] ml-1" alt="Figma" />
+                </span>
+              </p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
 
       {/* Le Laboratoire de l'Alpe Project */}
       <div className="flex flex-col gap-4 p-4 md:p-8 rounded-[15px] border border-solid border-white w-full md:w-[45%] lg:w-[40%]">
-        <h3 className="text-center font-poppins font-bold text-xl md:text-2xl">lelaboratoiredelalpe.ch</h3>
-        <div className="flex flex-col items-center gap-4">
-          <a href="https://lelaboratoiredelalpe.ch" target="_blank" rel="noreferrer">
-            <img className="w-full h-auto object-contain mx-auto" src={siteLabo} alt="site_laboratoiredelalpe" />
-          </a>
-          <div className="flex items-center gap-2">
-            <p className="font-poppins text-sm md:text-base">
-              Site pour une association sous{" "}
-              <span className="inline-flex items-center">
-                Laravel <img src={laravelIcon} className="h-[16px] md:h-[18px] ml-1" alt="Laravel" />
-              </span> et {""}
-              <span className="inline-flex items-center">
-                Tailwindcss <img src={tailwindIcon} className="h-[16px] md:h-[18px] ml-1" alt="Tailwindcss" /></span>, wireframe, maquette sous{" "}
-              <span className="inline-flex items-center">
-                Figma <img src={figmaIcon} className="h-[16px] md:h-[18px] ml-1" alt="Figma" />
-              </span>
-            </p>
+        <a href="https://lelaboratoiredelalpe.ch" target="_blank" rel="noreferrer">
+          <h3 className="text-center font-poppins font-bold text-xl md:text-2xl">lelaboratoiredelalpe.ch</h3>
+          <div className="flex flex-col items-center gap-4">
+              <img className="w-full h-auto object-contain mx-auto" src={siteLabo} alt="site_laboratoiredelalpe" />
+            <div className="flex items-center gap-2">
+              <p className="font-poppins text-sm md:text-base">
+                Site pour une association sous{" "}
+                <span className="inline-flex items-center">
+                  Laravel <img src={laravelIcon} className="h-[16px] md:h-[18px] ml-1" alt="Laravel" />
+                </span> et {""}
+                <span className="inline-flex items-center">
+                  Tailwindcss <img src={tailwindIcon} className="h-[16px] md:h-[18px] ml-1" alt="Tailwindcss" /></span>, wireframe, maquette sous{" "}
+                <span className="inline-flex items-center">
+                  Figma <img src={figmaIcon} className="h-[16px] md:h-[18px] ml-1" alt="Figma" />
+                </span>
+              </p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
 
       {/* SaveFood Project */}
       <div className="flex flex-col gap-4 p-4 md:p-8 rounded-[15px] border border-solid border-white w-full md:w-[45%] lg:w-[40%]">
-        <h3 className="text-center font-poppins font-bold text-xl md:text-2xl">SaveFood</h3>
-        <div className="flex flex-col items-center gap-4">
-          <a href="https://save-food-project.netlify.app/" target="_blank" rel="noreferrer">
-            <img className="w-full h-auto object-contain mx-auto" src={savefood} alt="savefood-project" />
-          </a>
-          <div className="flex items-center gap-2">
-            <p className="font-poppins text-sm md:text-base">
-              Web app APIREST dont le front est développé en{" "}
-              <span className="inline-flex items-center">
-                React.JS <img src={reactJS} className="h-[16px] md:h-[18px] ml-1" alt="React.JS" />
-              </span> et{""}
-              <span className="inline-flex items-center">
-                Tailwindcss <img src={tailwindIcon} className="h-[16px] md:h-[18px] ml-1" alt="Tailwindcss" /></span>, back-end architecture MVC, developpé en {""}
-              <span className="inline-flex items-center">
-                Python <img src={python} className="h-[16px] md:h-[18px] ml-1" alt="Python" /></span> et {""}
-              <span className="inline-flex items-center">Flask <img src={flask} className="h-[16px] md:h-[18px] ml-1" alt="Flask" /></span> base de données NoSQL sous {""}
-              <span className="inline-flex items-center">Firebase <img src={firebase} className="h-[16px] md:h-[18px] ml-1" alt="Firebase" /></span> wireframe, maquette sous{" "}
-              <span className="inline-flex items-center">
-                Figma <img src={figmaIcon} className="h-[16px] md:h-[18px] ml-1" alt="Figma" />
-              </span>
-            </p>
+        <a href="https://save-food-project.netlify.app/" target="_blank" rel="noreferrer">
+          <h3 className="text-center font-poppins font-bold text-xl md:text-2xl">SaveFood</h3>
+          <div className="flex flex-col items-center gap-4">
+              <img className="w-full h-auto object-contain mx-auto" src={savefood} alt="savefood-project" />
+            <div className="flex items-center gap-2">
+              <p className="font-poppins text-sm md:text-base">
+                Web app APIREST dont le front est développé en{" "}
+                <span className="inline-flex items-center">
+                  React.JS <img src={reactJS} className="h-[16px] md:h-[18px] ml-1" alt="React.JS" />
+                </span> et{""}
+                <span className="inline-flex items-center">
+                  Tailwindcss <img src={tailwindIcon} className="h-[16px] md:h-[18px] ml-1" alt="Tailwindcss" /></span>, back-end architecture MVC, developpé en {""}
+                <span className="inline-flex items-center">
+                  Python <img src={python} className="h-[16px] md:h-[18px] ml-1" alt="Python" /></span> et {""}
+                <span className="inline-flex items-center">Flask <img src={flask} className="h-[16px] md:h-[18px] ml-1" alt="Flask" /></span> base de données NoSQL sous {""}
+                <span className="inline-flex items-center">Firebase <img src={firebase} className="h-[16px] md:h-[18px] ml-1" alt="Firebase" /></span> wireframe, maquette sous{" "}
+                <span className="inline-flex items-center">
+                  Figma <img src={figmaIcon} className="h-[16px] md:h-[18px] ml-1" alt="Figma" />
+                </span>
+              </p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );
