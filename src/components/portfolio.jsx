@@ -9,6 +9,10 @@ import reactJS from '../assets/svg/react.svg';
 import python from '../assets/svg/python.svg';
 import flask from '../assets/svg/flask.svg';
 import firebase from '../assets/svg/firebase.svg';
+import bootstrap from '../assets/svg/bootstrap.svg';
+import html from '../assets/svg/html-5.svg';
+import mysql from '../assets/svg/mysql-icon.svg';  
+import crm from '../assets/jpg/crm.png';
 
 const Projects = () => {
   return (
@@ -75,6 +79,32 @@ const Projects = () => {
                   Python <img src={python} className="h-[16px] md:h-[18px] ml-1" alt="Python" /></span> et {""}
                 <span className="inline-flex items-center">Flask <img src={flask} className="h-[16px] md:h-[18px] ml-1" alt="Flask" /></span> base de données NoSQL sous {""}
                 <span className="inline-flex items-center">Firebase <img src={firebase} className="h-[16px] md:h-[18px] ml-1" alt="Firebase" /></span> wireframe, maquette sous{" "}
+                <span className="inline-flex items-center">
+                  Figma <img src={figmaIcon} className="h-[16px] md:h-[18px] ml-1" alt="Figma" />
+                </span>
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      {/* CRM project */}
+      <div className="flex flex-col gap-4 p-4 md:p-8 rounded-[15px] border border-solid border-white w-full md:w-[45%] lg:w-[40%]">
+        <a href="https://www.linkedin.com/posts/vincent-gaillard-164776287_crm-python-activity-7316547602018099200-TAGZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEWz5FwBwAq8SJlibP20R1FalzRqeCG2SZk" target="_blank" rel="noreferrer">
+          <h3 className="text-center font-poppins font-bold text-xl md:text-2xl">CRM</h3>
+          <div className="flex flex-col items-center gap-4">
+              <img className="w-full h-auto object-contain mx-auto" src={crm} alt="crm-project" />
+            <div className="flex items-center gap-2">
+              <p className="font-poppins text-sm md:text-base">
+                Web app APIREST dont le front est développé en{" "}
+                <span className="inline-flex items-center">
+                  HTML5 Jinja2 <img src={html} className="h-[16px] md:h-[18px] ml-1" alt="React.JS" />
+                </span> et{""}
+                <span className="inline-flex items-center">
+                  Bootstrap <img src={bootstrap} className="h-[16px] md:h-[18px] ml-1" alt="Tailwindcss" /></span>, back-end architecture MVC, developpé en {""}
+                <span className="inline-flex items-center">
+                  Python <img src={python} className="h-[16px] md:h-[18px] ml-1" alt="Python" /></span> et {""}
+                <span className="inline-flex items-center">Flask <img src={flask} className="h-[16px] md:h-[18px] ml-1" alt="Flask" /></span> base de données SQL sous {""}
+                <span className="inline-flex items-center">MySQL <img src={mysql} className="h-[16px] md:h-[18px] ml-1" alt="Firebase" /></span> wireframe, maquette sous{" "}
                 <span className="inline-flex items-center">
                   Figma <img src={figmaIcon} className="h-[16px] md:h-[18px] ml-1" alt="Figma" />
                 </span>
