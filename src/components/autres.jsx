@@ -8,6 +8,8 @@ import docker from '../assets/svg/docker-icon.svg';
 import vite from '../assets/svg/vitejs.svg';
 import figma from '../assets/svg/figma.svg';
 import postman from '../assets/svg/postman-icon.svg';
+import { useContext } from "react";
+import { LanguageContext } from "./LanguageContext";
 
 export function Autres() {
     const techs = [
@@ -22,6 +24,19 @@ export function Autres() {
       {src: postman, alt: "postman_icone", name: "postman"},
     ];
 
+    const { language } = useContext(LanguageContext);
+
+  // Dictionnaire de traduction
+  const translations = {
+    en: {
+      text: "Others"
+    },
+    fr: {
+      text: "Autres"
+    }
+  };
+
+  const t = translations[language];
     return (
         
       <motion.div
@@ -31,7 +46,7 @@ export function Autres() {
       transition={{ duration: 0.8, ease: "easeOut" }} // Smooth animation
       viewport={{ once: true, amount: 0.2 }} // Scroll Trigger
     >
-          <h3 className='m-auto font-poppins font-bold text-2xl'>Autres</h3>
+          <h3 className='m-auto font-poppins font-bold text-2xl'>{t.text}</h3>
           <div className='flex flex-row gap-4 flex-wrap items-center justify-center'>
           {techs.map((tech, index) => (
           <motion.div

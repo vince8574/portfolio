@@ -1,12 +1,47 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "./LanguageContext";
 import download from "../assets/svg/download.svg";
-import cv from "../assets/pdf/cv.pdf";
+import cvFR from "../assets/pdf/cv_fr.pdf";
+import cvEN from "../assets/pdf/cv_en.pdf";
+
+// Dictionnaire de traduction pour le header
+const translations = {
+  en: {
+    home: "Home",
+    skills: "Skills",
+    portfolio: "Portfolio",
+    experience: "My Experience",
+    thanks: "Thanks",
+    contact: "Contact",
+    cv: "Resume"
+  },
+  fr: {
+    home: "Accueil",
+    skills: "Compétences",
+    portfolio: "Portfolio",
+    experience: "Mon expérience",
+    thanks: "Merci",
+    contact: "Contact",
+    cv: "CV"
+  }
+};
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef(null);
+  
+  // Utilisation du contexte de langue
+  const { language, toggleLanguage } = useContext(LanguageContext);
+  const t = translations[language];
+  
+  // Sélectionner le CV approprié selon la langue
+  const cv = language === "fr" ? cvFR : cvEN;
+
+  const handleToggleLanguage = () => {
+    toggleLanguage(language === "fr" ? "en" : "fr");
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,7 +93,7 @@ function Header() {
         {/* Title displayed only on mobile */}
         <Link
           to=""
-          title="Accueil"
+          title={t.home}
           className="font-poppins font-bold text-lg lg:hidden"
           onClick={scrollToTop}
         >
@@ -73,7 +108,7 @@ function Header() {
               onClick={scrollToTop}
               className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]"
             >
-              Accueil
+              {t.home}
             </Link>
           </li>
           <li>
@@ -81,7 +116,7 @@ function Header() {
               to="/#competences"
               className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]"
             >
-              Compétences
+              {t.skills}
             </Link>
           </li>
           <li>
@@ -89,7 +124,7 @@ function Header() {
               to="/#portfolio"
               className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]"
             >
-              Portfolio
+              {t.portfolio}
             </Link>
           </li>
           <li>
@@ -97,7 +132,7 @@ function Header() {
               to="/#experience"
               className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]"
             >
-              Mon expérience
+              {t.experience}
             </Link>
           </li>
           <li>
@@ -105,7 +140,7 @@ function Header() {
               to="/#merci"
               className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]"
             >
-              Merci
+              {t.thanks}
             </Link>
           </li>
           <li>
@@ -113,17 +148,28 @@ function Header() {
               to="/contact"
               className="block font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432]"
             >
-              Contact
+              {t.contact}
             </Link>
           </li>
           <li>
             <a
               href={cv}
-              download="cv_vincent_gaillard"
+              download={language === "fr" ? "cv_vincent_gaillard" : "resume_vincent_gaillard"}
               className="font-poppins font-bold text-lg md:text-xl lg:text-2xl py-2 px-4 hover:bg-[#2a3432] flex items-center"
             >
-              CV <img className="w-5 h-5 ml-2" src={download} alt="CV" />
+              {t.cv} <img className="w-5 h-5 ml-2" src={download} alt="CV" />
             </a>
+          </li>
+          
+          {/* Toggle de langue */}
+          <li className="flex items-center">
+            <button 
+              onClick={handleToggleLanguage}
+              className="px-3 py-1 rounded flex items-center hover:bg-[#2a3432] font-poppins font-bold"
+              aria-label="Changer de langue"
+            >
+              {language === "fr" ? "EN" : "FR"}
+            </button>
           </li>
         </ul>
 
@@ -193,43 +239,57 @@ function Header() {
             <ul className="space-y-6 text-center font-bold text-xl">
               <li>
                 <Link to="" onClick={scrollToTop}>
-                  Accueil
+                  {t.home}
                 </Link>
               </li>
               <li>
                 <Link to="/#competences" onClick={closeMenu}>
-                  Compétences
+                  {t.skills}
                 </Link>
               </li>
               <li>
                 <Link to="/#portfolio" onClick={closeMenu}>
-                  Portfolio
+                  {t.portfolio}
                 </Link>
               </li>
               <li>
                 <Link to="/#experience" onClick={closeMenu}>
-                  Mon expérience
+                  {t.experience}
                 </Link>
               </li>
               <li>
                 <Link to="/#merci" onClick={closeMenu}>
-                  Merci
+                  {t.thanks}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" onClick={closeMenu}>
-                  Contact
+                  {t.contact}
                 </Link>
               </li>
               <li>
                 <a
                   href={cv}
-                  download="cv_vincent_gaillard"
+                  download={language === "fr" ? "cv_vincent_gaillard" : "resume_vincent_gaillard"}
                   className="flex items-center justify-center"
                   onClick={closeMenu}
                 >
-                  CV <img className="w-6 h-6 ml-2" src={download} alt="CV" />
+                  {t.cv} <img className="w-6 h-6 ml-2" src={download} alt="CV" />
                 </a>
+              </li>
+              
+              {/* Toggle de langue pour mobile */}
+              <li>
+                <button 
+                  onClick={() => {
+                    handleToggleLanguage();
+                    closeMenu();
+                  }}
+                  className="px-4 py-2 rounded bg-[#2a3432] hover:bg-[#374542]"
+                  aria-label="Changer de langue"
+                >
+                  {language === "fr" ? "Switch to English" : "Passer en Français"}
+                </button>
               </li>
             </ul>
           </div>
