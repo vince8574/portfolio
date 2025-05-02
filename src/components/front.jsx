@@ -4,6 +4,8 @@ import css from '../assets/svg/css-3.svg';
 import tailwindcss from '../assets/svg/tailwindcss-icon.svg';
 import javascript from '../assets/svg/javascript.svg';
 import reactIcon from '../assets/svg/react.svg';
+import angular from '../assets/svg/angular-icon.svg';
+import typescript from '../assets/svg/typescript-icon.svg';
 
 export function Front() {
     const techs = [
@@ -12,6 +14,9 @@ export function Front() {
       {src: tailwindcss, alt: "tailwindcss_icone", name: "tailwindcss"},
       {src: javascript, alt: "javascript_icone", name: "javascript"},
       {src: reactIcon, alt: "react_icone", name: "react"},
+      {src: angular, alt: "angular_icone", name: "angular"},
+      {src: typescript, alt: "typescript_icone", name: "typescript"},
+
     ];
     return (
         
